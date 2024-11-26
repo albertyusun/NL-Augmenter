@@ -1,47 +1,39 @@
-# Black formatting
-[tool.black]
-line-length = 79
-include = '\.pyi?$'
-exclude = '''
-/(
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
-    | \.hg
-    | \.mypy_cache
-    | \.tox
-    | \.venv
-    | _build
-    | buck-out
-    | build
-    | dist
-  )/
-'''
+[tool.poetry]
+name = "nlaugmenter"
+version = "1.1.0"
+description = "NL-Augmenter library for text augmentation"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
 
-# iSort
-[tool.isort]
-profile = "black"
-line_length = 79
-multi_line_output = 3
-include_trailing_comma = true
-skip_gitignore = true
-virtual_env = "venv"
+[tool.poetry.dependencies]
+python = "^3.7"
+spacy = "3.0.0"
+numpy = "*"
+torch = "*"
+num2words = "0.5.10"
+word2number = "1.1"
+datasets = "1.7.0"
+transformers = "4.6.1"
+sacrebleu = "1.5.1"
+seqeval = "1.2.2"
+tqdm = "*"
+sentencepiece = "0.1.95"
 
-# Pytest
-[tool.pytest.ini_options]
-testpaths = ["test"]
-python_files = "test_*.py"
-# markers can be added to exclude heavy methods
+# Specific git dependencies
+checklist = {git = "https://github.com/decypher-ai/checklist.git", rev = "e6ffe5e148585d0bd377a590d3d46aa58978d83c"}
 
-# Pytest coverage
-#[tool.coverage.run]
-#omit = [""]
+[tool.poetry.group.dev.dependencies]
+pytest = "6.2.4"
+pytest-cov = "2.12.1"
+black = "21.5b2"
+pre-commit = "2.13.0"
+flake8 = "3.9.2"
+isort = "5.9.1"
 
-# Pytest report
-[tool.coverage.report]
-fail_under = 90.0
-skip_empty = true
-show_missing = true
+# Explicitly set setuptools version
+[tool.poetry.dependencies.setuptools]
+version = "<59.7.0"
 
 [build-system]
-requires = ["setuptools", "wheel"]
-
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
