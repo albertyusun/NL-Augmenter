@@ -7,17 +7,17 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"  # Updated Python version
-spacy = "^3.5.0"  # More recent version
-numpy = "^1.20.0"  # Specify minimum version
-torch = "^1.10.0"  # Specify torch version
-num2words = "0.5.10"
-word2number = "1.1"
+spacy = ">=3.5.0"  # More recent version
+numpy = ">=1.20.0"  # Specify minimum version
+torch = ">=1.10.0,<3.0.0"  # Allows a wide range of torch versions
+num2words = ">=0.5.10"
+word2number = ">=1.1"
 transformers = ">=4.6.1,<4.46.0"
-datasets = "^2.10.0"  # Update to recent version
-sacrebleu = "^2.0.0"  # Consider updating
-seqeval = "^1.2.2"
-tqdm = "^4.65.0"
-sentencepiece = "^0.1.99"
+datasets = ">=2.10.0"  # Update to recent version
+sacrebleu = ">=2.0.0"  # Consider updating
+seqeval = ">=1.2.2"
+tqdm = ">=4.65.0"
+sentencepiece = ">=0.1.99"
 
 # Specific git dependencies
 checklist = {git = "https://github.com/decypher-ai/checklist.git", rev = "e6ffe5e148585d0bd377a590d3d46aa58978d83c"}
