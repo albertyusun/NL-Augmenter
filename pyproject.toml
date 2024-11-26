@@ -18,7 +18,7 @@ sacrebleu = ">=2.0.0"  # Consider updating
 seqeval = ">=1.2.2"
 tqdm = ">=4.65.0"
 sentencepiece = ">=0.1.99"
-iso-639
+iso-639 = ">=0.4.5"  # Use the latest stable version
 
 # Specific git dependencies
 checklist = {git = "https://github.com/decypher-ai/checklist.git", rev = "e6ffe5e148585d0bd377a590d3d46aa58978d83c"}
