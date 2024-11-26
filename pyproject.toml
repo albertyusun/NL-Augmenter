@@ -6,32 +6,29 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.7"
-spacy = "3.0.0"
-numpy = "*"
-torch = "*"
+python = "^3.8"  # Updated Python version
+spacy = "^3.5.0"  # More recent version
+numpy = "^1.20.0"  # Specify minimum version
+torch = "^1.10.0"  # Specify torch version
 num2words = "0.5.10"
 word2number = "1.1"
-datasets = "1.7.0"
-transformers = ">=4.6.1,<4.46.0"  # Make the version range more flexible
-sacrebleu = "1.5.1"
-seqeval = "1.2.2"
-tqdm = "*"
-sentencepiece = "0.1.95"
+transformers = ">=4.6.1,<4.46.0"
+datasets = "^2.10.0"  # Update to recent version
+sacrebleu = "^2.0.0"  # Consider updating
+seqeval = "^1.2.2"
+tqdm = "^4.65.0"
+sentencepiece = "^0.1.99"
 
 # Specific git dependencies
 checklist = {git = "https://github.com/decypher-ai/checklist.git", rev = "e6ffe5e148585d0bd377a590d3d46aa58978d83c"}
 
-# Remove specific setuptools constraint
-# setuptools = "<59.7.0"  # Commented out or removed
-
 [tool.poetry.group.dev.dependencies]
-pytest = "6.2.4"
-pytest-cov = "2.12.1"
-black = "21.5b2"
-pre-commit = "2.13.0"
-flake8 = "3.9.2"
-isort = "5.9.1"
+pytest = "^7.3.0"  # Update to recent version
+pytest-cov = "^4.0.0"
+black = "^23.3.0"
+pre-commit = "^3.3.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
 
 [build-system]
 requires = ["poetry-core", "setuptools>=59.6.0"]
