@@ -13,7 +13,7 @@ torch = "*"
 num2words = "0.5.10"
 word2number = "1.1"
 datasets = "1.7.0"
-transformers = "4.6.1"
+transformers = ">=4.6.1,<4.46.0"  # Make the version range more flexible
 sacrebleu = "1.5.1"
 seqeval = "1.2.2"
 tqdm = "*"
