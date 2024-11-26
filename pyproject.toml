@@ -22,6 +22,9 @@ sentencepiece = "0.1.95"
 # Specific git dependencies
 checklist = {git = "https://github.com/decypher-ai/checklist.git", rev = "e6ffe5e148585d0bd377a590d3d46aa58978d83c"}
 
+# Remove specific setuptools constraint
+# setuptools = "<59.7.0"  # Commented out or removed
+
 [tool.poetry.group.dev.dependencies]
 pytest = "6.2.4"
 pytest-cov = "2.12.1"
@@ -30,10 +33,6 @@ pre-commit = "2.13.0"
 flake8 = "3.9.2"
 isort = "5.9.1"
 
-# Explicitly set setuptools version
-[tool.poetry.dependencies.setuptools]
-version = "<59.7.0"
-
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core", "setuptools>=59.6.0"]
 build-backend = "poetry.core.masonry.api"
