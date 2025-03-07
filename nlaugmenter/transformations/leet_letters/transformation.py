@@ -81,10 +81,6 @@ class LeetLetters(SentenceOperation):
                 leet_candidates, k=max_leet_replacements
             )
 
-            leet_replacements = random.choices(
-                leet_candidates, k=max_leet_replacements
-            )
-
             # Conduct replacement
             sentence_list = list(sentence)
             for idx, leet in leet_replacements:
