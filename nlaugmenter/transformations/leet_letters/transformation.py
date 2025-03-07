@@ -70,6 +70,13 @@ class LeetLetters(SentenceOperation):
             for idx, letter in enumerate(sentence):
                 if letter in leet_letter_mappings:
                     leet_candidates.append((idx, leet_letter_mappings[letter]))
+
+            if not leet_candidates:
+                perturbed_texts.append(sentence)
+                continue
+
+            max_leet_replacements = min(max_leet_replacements, len(leet_candidates))
+
             leet_replacements = random.choices(
                 leet_candidates, k=max_leet_replacements
             )
